@@ -17,6 +17,7 @@ let weather = {
         document.getElementById("humidity").textContent = `Humidity: ${humidity}%`;
         document.getElementById("wind").textContent = `Wind Speed: ${speed}km/h`;
         document.getElementById("weather").classList.remove("loading");
+        document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${name}')`;
     },
     search: function () {
         this.fetchWeather(document.getElementById("searchBar").value)
