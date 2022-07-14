@@ -106,6 +106,21 @@ body {
     flex-direction: column;
 }
 
+.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.loading:after{
+    visibility: visible;
+    content: "Loading...";
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
 .weather__city {
     font-size: 1.5em;
     margin-bottom: .3em;
@@ -113,9 +128,24 @@ body {
     text-transform: uppercase;
 }
 
+.weather__flex {
+    display: flex;
+    align-items: center;
+}
+
 .weather__temp {
     font-size: 2em;
 }
+
+.weather__icon {
+    width: 4em;
+    height: 4em;
+}
+
+.weather__description {
+    text-transform: capitalize;
+}
+
 
 .weather__temp,
 .weather__img,
